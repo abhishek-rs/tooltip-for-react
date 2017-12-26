@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+
 .image{
   text-align: center;
   position: relative;
   align-self: center;
+  padding: 30px;
+  background: #ccc;
 }
 
 .container{
@@ -12,4 +16,21 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+
+.tooltip{
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.textBox{
+  margin-top: 10px;
+  background: #ccc;
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 30px;
+}
+
+.compoundImage{
+  width: 250px;
+  height: 200px;
 }
