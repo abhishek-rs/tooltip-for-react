@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { CSSTransitionGroup } from 'react-transition-group';
 import deepmerge from 'deepmerge';
 import css from './index.scss';
 
@@ -202,14 +203,22 @@ export default class Tooltip extends React.Component {
         style={styles.wrapper}
         ref={this.setParentRef}
       >
-        {children}
-        {
-          state.visible &&
-          <div style={styles.tooltip} className={css.tooltip}>
-            <div style={styles.content}>{content}</div>
-            <div style={styles.arrow} />
-          </div>
-        }
+        <CSSTransitionGroup
+          transitionName="tooltip"
+          transitionAppear
+          transitionAppearTimeout={200}
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={50}
+        >
+          {children}
+          {
+            state.visible &&
+              <div style={styles.tooltip} className={css.tooltip}>
+                <div style={styles.content}>{content}</div>
+                <div style={styles.arrow} />
+              </div>
+          }
+        </CSSTransitionGroup>
       </div>
     );
   }
