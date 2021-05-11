@@ -27,7 +27,7 @@
   "dependencies": {
     "@storybook/react": "3.2.15",
     "deepmerge": "^2.0.1",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.21",
     "prop-types": "^15.6.0",
     "react": "16.1.1",
     "react-dom": "16.1.2",
